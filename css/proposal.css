@@ -30,5 +30,11 @@ h1 {
     font-size: 16px; 
   }
   
-  
+footer {
+    background-color: purple; 
+    color: #fff; 
+    text-align: left; 
+    padding: 20px; 
+    font-family: Arial, sans-serif; 
+  }
  
