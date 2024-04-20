@@ -7,7 +7,6 @@ body {
 }
 
 nav {
-    /* display: flex; */
     background-color: #77529e;
     color: white;
     padding: .5rem;
@@ -17,7 +16,6 @@ nav {
 }
 
 .nav-links {
-    /* display: inline; */
     padding: 0;
 }
 
@@ -33,6 +31,7 @@ h2, main h1 {
 
 h2 {
     font-weight: 400;
+    font-size: 1.5rem;
 }
 
 a {
@@ -44,7 +43,6 @@ form {
 }
 
 .quiz-body {
-    /* background-color: #dcd6f7; */
     text-align: left;
 }
 
@@ -59,6 +57,7 @@ form {
 .quiz-container {
     border-radius: 15px;
     margin: .5rem;
+    padding: .2rem 5rem 2rem;
     background-color: #fafafa;
 }
 
