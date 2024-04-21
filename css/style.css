@@ -114,3 +114,7 @@ footer {
     font-size: small;
     margin: 0;
 }
+
+.lib-pic {
+    max-width: 50%;
+}
