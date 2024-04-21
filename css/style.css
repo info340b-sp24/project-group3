@@ -118,3 +118,7 @@ footer {
 .lib-pic {
     max-width: 50%;
 }
+
+a {
+    color: black;
+}
