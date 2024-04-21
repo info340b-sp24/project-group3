@@ -68,8 +68,10 @@ form {
 
 .card-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .card {
@@ -89,6 +91,7 @@ form {
 .card img {
     width: 100%;
     border-radius: 10px 10px 0 0;
+    max-height: 120px;
 }
 
 .card-body {
