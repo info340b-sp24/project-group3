@@ -1,4 +1,4 @@
-<!DOCTYPEhtml>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -35,16 +35,16 @@
         <h2>Take the quiz to find your ideal study spot</h2>
 
         <form>
-            <section class="quiz-container">
+            <div class="quiz-container">
                 <div class="question">
                     <p>Would you like a silent area available to you?</p>
                     <div>
-                        <input type="radio" name="noise">
-                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes-silent" name="noise">
+                        <label for="yes-silent">Yes</label>
                     </div>
                     <div>
-                        <input type="radio" name="noise">
-                        <label for="no">No</label>
+                        <input type="radio" id="no-silent" name="noise">
+                        <label for="no-silent">No</label>
                     </div>
                     
                 </div>
@@ -52,19 +52,19 @@
                 <div class="question">
                     <p>What area of campus would you like to study?</p>
                     <div>
-                        <input type="radio" name="area">
+                        <input type="radio" id="north" name="area">
                         <label for="north">North</label>
                     </div>
                     <div>
-                        <input type="radio" name="area">
+                        <input type="radio" id="west" name="area">
                         <label for="west">West</label>
                     </div>
                     <div>
-                        <input type="radio" name="area">
+                        <input type="radio" id="south" name="area">
                         <label for="south">South</label>
                     </div>
                     <div>
-                        <input type="radio" name="area">
+                        <input type="radio" id="central" name="area">
                         <label for="central">Central</label>
                     </div>
                 </div>
@@ -90,55 +90,55 @@
                 <div class="question">
                     <p>What resources do you need available to you?</p>
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" id="Whiteboards">
                         <label for="Whiteboards">Whiteboards</label>
                     </div>
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" id="Outlets">
                         <label for="Outlets">Outlets</label>
                     </div>
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" id="Computers">
                         <label for="Computers">Computers</label>
                     </div>
                     <div>
-                        <input type="checkbox">
-                        <label for="printers">Printers</label>
+                        <input type="checkbox" id="Printers">
+                        <label for="Printers">Printers</label>
                     </div>
                 </div>
 
                 <div class="question">
                     <p>Do you have your husky card?</p>
                     <div>
-                        <input type="radio" name="type">
-                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes-card" name="type">
+                        <label for="yes-card">Yes</label>
                     </div>
                     <div>
-                        <input type="radio" name="type">
-                        <label for="no">No</label>
+                        <input type="radio" id="no-card" name="type">
+                        <label for="no-card">No</label>
                     </div>
                 </div>
 
                 <div class="question">
                     <p>Would you like food options available nearby?</p>
                     <div>
-                        <input type="radio" name="food">
-                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes-food" name="food">
+                        <label for="yes-food">Yes</label>
                     </div>
                     <div>
-                        <input type="radio" name="food">
-                        <label for="no">No</label>
+                        <input type="radio" id="no-food" name="food">
+                        <label for="no-food">No</label>
                     </div>
                     <div>
-                        <input type="radio" name="food">
+                        <input type="radio" id="no-preference" name="food">
                         <label for="no-preference">No preference</label>
                     </div>
                 </div>
                 
-            </section>
+            </div>
 
             <div class="submit">
-                <button class="btn btn-primary" href="quizresults.html">Submit</button>
+                <a class="btn btn-primary" href="quizresults.html">Submit</a>
             </div>
         </form>
     </main>
