@@ -61,7 +61,37 @@ form {
     background-color: #fafafa;
 }
 
+@media (min-width: 992px) {
+    .nav-links {
+        align-items: center;
+        width: 30%;
+        padding-top: 1.5rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        justify-content: space-between;
+        padding: .5rem;
+        width: 100%;
+    }
+
+    nav h1 {
+        margin-top: 1rem;
+        margin bottom: 0;
+        margin-top: 1rem;
+    }
+
+    .quiz-container {
+        padding-left: 15rem;
+        padding-right: 0;
+        justify-content: center;
+    }
+}
+
 footer {
+    bottom: 0;
+    width: 100%;
     font-size: small;
-    margin: 0;
 }
