@@ -23,15 +23,15 @@ function Card(props) {
   
   function App() {
     const studySpots = [
-      { title: "Suzzallo", link: "suz.html", image: "img/suzallo.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Odegaard", link: "odegaard.html", image: "img/odegaard.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Mary Gates", link: "marygates.html", image: "img/marygates.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Maple", link: "maple.html", image: "img/maple.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "IMA", link: "ima.html", image: "img/ima.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "The HUB", link: "hub.html", image: "img/hub.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Foster", link: "foster.html", image: "img/foster.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Engineering Library", link: "engineering.html", image: "img/engineering.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Denny", link: "denny.html", image: "img/denny.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] }
+      { title: "Suzzallo", link: "suz.html", image: "./img/suzallo.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "Odegaard", link: "odegaard.html", image: "./img/odegaard.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "Mary Gates", link: "marygates.html", image: "./img/marygates.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "Maple", link: "maple.html", image: "./img/maple.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "IMA", link: "ima.html", image: "./img/ima.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "The HUB", link: "hub.html", image: "./img/hub.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "Foster", link: "foster.html", image: "./img/foster.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "Engineering Library", link: "./engineering.html", image: "img/engineering.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+      { title: "Denny", link: "denny.html", image: "./img/denny.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] }
     ];
   
     return (
