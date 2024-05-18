@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
 import { Quiz } from './quiz';
+import { QuizResults } from './quizresults';
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
 
@@ -81,6 +82,7 @@ function Card(props) {
         </div>
 
         <Quiz></Quiz>
+        <QuizResults></QuizResults>
   
         <footer>
           <p>&copy; 2024 Husky Study Hub</p>

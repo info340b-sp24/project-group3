@@ -1,25 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function QuizResults() {
+export function QuizResults() {
     return (
         <>
-            <header>
-                <nav>
-                    <h1>Husky Study Hub</h1>
-                    <ul className="nav-links"> 
-                        <li>
-                            <a href="index.html">Explore</a>
-                        </li>
-                        <li>
-                            <a href="reviews.html">Reviews</a>
-                        </li>
-                        <li>
-                            <a href="quiz.html">Quiz</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
 
             <main>
                 <h1>You should study at...</h1>
@@ -38,13 +22,9 @@ function QuizResults() {
                 </div>
             </main>
 
-            <footer>
-                <p>&copy; 2024 Husky Study Hub</p>
-                <p>Meg Balfrey, Josh Auvaa, Mia Young, Nedim Suko</p>
-            </footer>
         </>
     );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<QuizResults />);
+// root.render(<QuizResults />);
