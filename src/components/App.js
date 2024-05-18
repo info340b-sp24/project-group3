@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom/client';
 import { Quiz } from './quiz';
 import { QuizResults } from './quizresults';
+import { Reviews } from './reviews';
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
 
@@ -35,24 +36,6 @@ function Card(props) {
       { title: "Engineering Library", link: "./engineering.html", image: "img/engineering.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
       { title: "Denny", link: "denny.html", image: "./img/denny.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] }
     ];
-
-    // function Card(props) {
-    //   return (
-    //     <div className="card">
-    //       <a href={props.link}>
-    //         <img src={props.image} className="card-img-top" alt="Study Spot Image" />
-    //         <div className="card-body">
-    //           <h5 className="card-title">{props.title}</h5>
-    //           <div className="attributes">
-    //             {props.attributes.map((attribute, index) => (
-    //               <div key={index} className="attribute-bubble">{attribute}</div>
-    //             ))}
-    //           </div>
-    //         </div>
-    //       </a>
-    //     </div>
-    //   );
-    // }
   
     return (
       <div>
@@ -83,6 +66,7 @@ function Card(props) {
 
         <Quiz></Quiz>
         <QuizResults></QuizResults>
+        <Reviews></Reviews>
   
         <footer>
           <p>&copy; 2024 Husky Study Hub</p>
