@@ -4,6 +4,7 @@ import { Quiz } from './quiz';
 import { QuizResults } from './quizresults';
 import { Reviews } from './reviews';
 import { SubmitReview } from './submitreview';
+import { Suzzallo } from './suz';
 
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
@@ -71,6 +72,7 @@ function Card(props) {
         <SubmitReview></SubmitReview>
         <QuizResults></QuizResults>
         <Reviews></Reviews>
+        <Suzzallo></Suzzallo>
   
         <footer>
           <p>&copy; 2024 Husky Study Hub</p>
