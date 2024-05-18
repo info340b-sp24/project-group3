@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
+import { Quiz } from './quiz';
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
 
@@ -20,7 +21,7 @@ function Card(props) {
       </div>
     );
   }
-  
+   
   function App() {
     const studySpots = [
       { title: "Suzzallo", link: "suz.html", image: "./img/suzallo.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
@@ -78,6 +79,8 @@ function Card(props) {
             ))}
           </div>
         </div>
+
+        <Quiz></Quiz>
   
         <footer>
           <p>&copy; 2024 Husky Study Hub</p>
