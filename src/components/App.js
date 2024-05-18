@@ -3,6 +3,8 @@ import ReactDom from 'react-dom/client';
 import { Quiz } from './quiz';
 import { QuizResults } from './quizresults';
 import { Reviews } from './reviews';
+import { SubmitReview } from './submitreview';
+
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
 
@@ -65,6 +67,8 @@ function Card(props) {
         </div>
 
         <Quiz></Quiz>
+        <QuizResults></QuizResults> 
+        <SubmitReview></SubmitReview>
         <QuizResults></QuizResults>
         <Reviews></Reviews>
   
