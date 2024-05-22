@@ -1,5 +1,14 @@
 {
   "projects": {
+<<<<<<< HEAD
     "default": "husky-study-hub"
   }
 }
+=======
+    "staging": "husky-study-hub-2024"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
+>>>>>>> cc2b4ec37938679e92aebe47708684d58d1d8eac
