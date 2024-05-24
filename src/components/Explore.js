@@ -1,16 +1,18 @@
 import React from 'react';
 
 function Card(props) {
+    const cardAttributes = props.attributes.map((attribute, index) => (
+        <div key={index} className="attribute-bubble">{attribute}</div>
+      ))
+    
     return (
       <div className="card">
         <a href={props.link}>
           <img src={props.image} className="card-img-top" alt="Study Spot Image" />
           <div className="card-body">
-            <h5 className="card-title">{props.title}</h5>
+            <h1 className="card-title">{props.title}</h1>
             <div className="attributes">
-              {props.attributes.map((attribute, index) => (
-                <div key={index} className="attribute-bubble">{attribute}</div>
-              ))}
+              {cardAttributes}
             </div>
           </div>
         </a>
@@ -20,7 +22,9 @@ function Card(props) {
 
 export function Explore(props) {
 
-    const studySpotCards = props.data.map((spot, index) => (
+    let sortedData = props.data;
+
+    const studySpotCards = sortedData.map((spot, index) => (
         <Card key={index} title={spot.title} link={spot.link} image={spot.image} attributes={spot.attributes} />
         ))
 
