@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Would you like a silent area available to you?",
+        "options": ["Yes", "No"],
+        "optionsType": "radio", 
+        "name": "noise" 
+    },
+    {
+        "question": "What area of campus would you like to study?",
+        "options": ["North", "West", "South", "Central"],
+        "optionsType": "radio",
+        "name": "area" 
+    },
+    {
+        "question": "What kind of environment are you feeling?",
+        "options": ["Popular", "Lesser Known", "Modern", "Gothic"],
+        "optionsType": "select",
+        "name": "environment" 
+    },
+    {
+        "question": "What resources do you need available to you?",
+        "options": ["Whiteboards", "Outlets", "Computers", "Printers"],
+        "optionsType": "checkbox",
+        "name":"resources"
+    },
+    {
+        "question": "Do you have your husky card?", 
+        "options": ["Yes", "No"], 
+        "optionsType": "radio", 
+        "name": "card" 
+    },
+    {
+        "question": "Would you like food options available nearby?", 
+        "options": ["Yes", "No"], 
+        "optionsType": "radio", 
+        "name": "food" 
+    }
+]

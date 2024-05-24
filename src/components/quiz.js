@@ -1,6 +1,8 @@
 // import { render } from '@testing-library/react';
 import React from 'react';
 
+// import QUESTION_DATA from './data/quiz-questions.json';
+
 function Question(props) {
     const renderOptions = () => {
         if (props.optionsType === "radio") {
@@ -38,15 +40,18 @@ function Question(props) {
     )
 }
 
-export function Quiz() {
-    const questions = [
-        { question: "Would you like a silent area available to you?", options: ["Yes", "No"], optionsType: "radio", name: "noise" },
-        { question: "What area of campus would you like to study?", options: ["North", "West", "South", "Central"], optionsType: "radio", name: "area" },
-        { question: "What kind of environment are you feeling?", options: ["Popular", "Lesser Known", "Modern", "Gothic"], optionsType: "select", name: "environment" },
-        { question: "What resources do you need available to you?", options: ["Whiteboards", "Outlets", "Computers", "Printers"], optionsType: "checkbox", name: "resources" },
-        { question: "Do you have your husky card?", options: ["Yes", "No"], optionsType: "radio", name: "card" },
-        { question: "Would you like food options available nearby?", options: ["Yes", "No"], optionsType: "radio", name: "food" },
-    ];
+export function Quiz(props) {
+
+    let questionData = props.questionData;
+    const questions = questionData.map((q, index) => (
+        <Question
+            key={index}
+            question={q.question}
+            options={q.options}
+            optionsType={q.optionsType}
+            name={q.name}
+        />
+    ))
 
     return (
         <main className="quiz-body">
@@ -55,15 +60,7 @@ export function Quiz() {
 
             <form>
                 <div className="quiz-container">
-                    {questions.map((q, index) => (
-                        <Question
-                            key={index}
-                            question={q.question}
-                            options={q.options}
-                            optionsType={q.optionsType}
-                            name={q.name}
-                        />
-                    ))}
+                    {questions}
                 </div>
 
                 <div className="submit">

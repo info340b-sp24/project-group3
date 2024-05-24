@@ -10,6 +10,8 @@ import { Suzzallo } from './suz';
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
 
+import QUESTION_DATA from './quiz-questions.json';
+
    
   function App(props) {
 
@@ -29,7 +31,7 @@ import { Suzzallo } from './suz';
         </header>
 
         <Explore data={displayedData}></Explore>
-        <Quiz></Quiz>
+        <Quiz questionData={QUESTION_DATA}></Quiz>
         <QuizResults></QuizResults> 
         <SubmitReview></SubmitReview>
         <QuizResults></QuizResults>

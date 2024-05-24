@@ -18,7 +18,7 @@ function Card(props) {
         </a>
       </div>
     );
-  }
+}
 
 export function Explore(props) {
 
