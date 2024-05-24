@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
+import { Explore } from './Explore';
 import { Quiz } from './quiz';
 import { QuizResults } from './quizresults';
 import { Reviews } from './reviews';
@@ -28,17 +29,17 @@ function Card(props) {
   }
    
   function App() {
-    const studySpots = [
-      { title: "Suzzallo", link: "suz.html", image: "./img/suzallo.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Odegaard", link: "odegaard.html", image: "./img/odegaard.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Mary Gates", link: "marygates.html", image: "./img/marygates.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Maple", link: "maple.html", image: "./img/maple.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "IMA", link: "ima.html", image: "./img/ima.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "The HUB", link: "hub.html", image: "./img/hub.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Foster", link: "foster.html", image: "./img/foster.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Engineering Library", link: "./engineering.html", image: "img/engineering.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
-      { title: "Denny", link: "denny.html", image: "./img/denny.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] }
-    ];
+    // const studySpots = [
+    //   { title: "Suzzallo", link: "suz.html", image: "./img/suzallo.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "Odegaard", link: "odegaard.html", image: "./img/odegaard.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "Mary Gates", link: "marygates.html", image: "./img/marygates.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "Maple", link: "maple.html", image: "./img/maple.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "IMA", link: "ima.html", image: "./img/ima.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "The HUB", link: "hub.html", image: "./img/hub.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "Foster", link: "foster.html", image: "./img/foster.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "Engineering Library", link: "./engineering.html", image: "img/engineering.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] },
+    //   { title: "Denny", link: "denny.html", image: "./img/denny.jpeg", attributes: ["Quiet", "Central", "Whiteboards"] }
+    // ];
   
     return (
       <div>
@@ -53,7 +54,7 @@ function Card(props) {
           </nav>
         </header>
   
-        <div className="index-container">
+        {/* <div className="index-container">
           <h1>Look at some of our top study spots on campus!</h1>
           <div className="search-bar">
             <label htmlFor="filter">Search:</label>
@@ -65,8 +66,9 @@ function Card(props) {
               <Card key={index} title={spot.title} link={spot.link} image={spot.image} attributes={spot.attributes} />
             ))}
           </div>
-        </div>
+        </div> */}
 
+        <Explore></Explore>
         <Quiz></Quiz>
         <QuizResults></QuizResults> 
         <SubmitReview></SubmitReview>
