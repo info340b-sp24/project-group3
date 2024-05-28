@@ -24,9 +24,9 @@ import QUESTION_DATA from './quiz-questions.json';
           <nav>
             <h1>Husky Study Hub</h1>
             <ul className="nav-links">
-              <li><Link to="index.html">Explore</Link></li>
-              <li><Link to="reviews.html">Reviews</Link></li>
-              <li><Link to="quiz.html">Quiz</Link></li>
+              <li><Link to="index.js">Explore</Link></li>
+              <li><Link to="reviews.js">Reviews</Link></li>
+              <li><Link to="quiz.js">Quiz</Link></li>
             </ul>
           </nav>
         </header>
