@@ -68,5 +68,6 @@ export function Quiz(props) {
                 </div>
             </form>
         </main>
+        
     );
 }

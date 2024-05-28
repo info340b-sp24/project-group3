@@ -6,6 +6,7 @@ import { QuizResults } from './quizresults';
 import { Reviews } from './reviews';
 import { SubmitReview } from './submitreview';
 import { Suzzallo } from './suz';
+import { Routes, Route, Link } from 'react-router-dom';
 
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
@@ -23,20 +24,22 @@ import QUESTION_DATA from './quiz-questions.json';
           <nav>
             <h1>Husky Study Hub</h1>
             <ul className="nav-links">
-              <li><a href="index.html">Explore</a></li>
-              <li><a href="reviews.html">Reviews</a></li>
-              <li><a href="quiz.html">Quiz</a></li>
+              <li><Link to="index.html">Explore</Link></li>
+              <li><Link to="reviews.html">Reviews</Link></li>
+              <li><Link to="quiz.html">Quiz</Link></li>
             </ul>
           </nav>
         </header>
 
-        <Explore data={displayedData}></Explore>
-        <Quiz questionData={QUESTION_DATA}></Quiz>
-        <QuizResults></QuizResults> 
-        <SubmitReview></SubmitReview>
-        <QuizResults></QuizResults>
-        <Reviews data={displayedData}></Reviews>
-        <Suzzallo></Suzzallo>
+        <Routes>
+          <Route index element={<Explore data={displayedData}></Explore>}></Route>
+          <Route path='index.html' element={<Explore data={displayedData}></Explore>} ></Route>
+          <Route path='quiz.html' element={<Quiz questionData={QUESTION_DATA}></Quiz>}></Route>
+          <Route path='quizresults.html' element={<QuizResults></QuizResults>}></Route> 
+          <Route path='submitreview.html' element={<SubmitReview></SubmitReview>}></Route>
+          <Route path='reviews.html' element={<Reviews data={displayedData}></Reviews>}></Route>
+          <Route path='suz.html' element={<Suzzallo></Suzzallo>}></Route>
+        </Routes>
   
         <footer>
           <p>&copy; 2024 Husky Study Hub</p>
