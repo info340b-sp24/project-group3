@@ -4,61 +4,70 @@
         "link": "suz.js", 
         "image": "./img/suzallo.jpeg", 
         "attributes": ["Quiet", "Central", "Popular"],
-        "rating": 5 
+        "rating": 5,
+        "location": "Central Campus"
     },
     {
         "title": "Odegaard", 
         "link": "odegaard.html", 
         "image": "./img/odegaard.jpeg",
         "attributes": ["Outlets", "Central", "Whiteboards"], 
-        "rating": 5 
+        "rating": 5,
+        "location": "Central Campus" 
     },
     { 
         "title": "Mary Gates", 
         "link": "marygates.html", 
         "image": "./img/marygates.jpeg", 
         "attributes": ["Quiet", "Central", "Gothic"],
-        "rating": 5  
+        "rating": 5,
+        "location": "Central Campus"  
     },
     {
         "title": "Maple", 
         "link": "maple.html", 
         "image": "./img/maple.jpeg", 
         "attributes": ["Modern", "West", "Whiteboards"],
-        "rating": 5 
+        "rating": 5,
+        "location": "West Campus" 
     },
     {
         "title": "IMA", 
         "link": "ima.html", 
         "image": "./img/ima.jpeg", 
         "attributes": ["Spacious", "South", "Modern"],
-        "rating": 5 
+        "rating": 5,
+        "location": "South Campus" 
     },
     {
         "title": "The HUB", 
         "link": "hub.html", 
         "image": "./img/hub.jpeg", 
         "attributes": ["Popular", "Central", "Outlets"],
-        "rating": 5 
+        "rating": 5,
+        "location": "Central Campus" 
     },
     {
         "title": "Foster", 
         "link": "foster.html", 
         "image": "./img/foster.jpeg", 
         "attributes": ["Quiet", "North", "Popular"],
-        "rating": 5 
+        "rating": 5,
+        "location": "North Campus" 
     },
     {
         "title": "Engineering Library", 
         "link": "./engineering.html", 
         "image": "img/engineering.jpeg", 
         "attributes": ["Outlets", "Central", "Whiteboards"],
-        "rating": 5 
+        "rating": 5,
+        "location": "Central Campus" 
     },
     {"title": "Denny", 
     "link": "denny.html", 
     "image": "./img/denny.jpeg", 
     "attributes": ["Quiet", "North", "Tables"],
-    "rating": 5 
+    "rating": 5,
+    "location": "North Campus" 
     }
 ]
