@@ -1,64 +1,64 @@
 [
     { 
         "title": "Suzzallo", 
-        "link": "suz.html", 
+        "link": "suz.js", 
         "image": "./img/suzallo.jpeg", 
-        "attributes": ["Quiet", "Central", "Whiteboards"],
+        "attributes": ["Quiet", "Central", "Popular"],
         "rating": 5 
     },
     {
         "title": "Odegaard", 
         "link": "odegaard.html", 
         "image": "./img/odegaard.jpeg",
-        "attributes": ["Quiet", "Central", "Whiteboards"], 
+        "attributes": ["Outlets", "Central", "Whiteboards"], 
         "rating": 5 
     },
     { 
         "title": "Mary Gates", 
         "link": "marygates.html", 
         "image": "./img/marygates.jpeg", 
-        "attributes": ["Quiet", "Central", "Whiteboards"],
+        "attributes": ["Quiet", "Central", "Gothic"],
         "rating": 5  
     },
     {
         "title": "Maple", 
         "link": "maple.html", 
         "image": "./img/maple.jpeg", 
-        "attributes": ["Quiet", "Central", "Whiteboards"],
+        "attributes": ["Modern", "West", "Whiteboards"],
         "rating": 5 
     },
     {
         "title": "IMA", 
         "link": "ima.html", 
         "image": "./img/ima.jpeg", 
-        "attributes": ["Quiet", "Central", "Whiteboards"],
+        "attributes": ["Spacious", "South", "Modern"],
         "rating": 5 
     },
     {
         "title": "The HUB", 
         "link": "hub.html", 
         "image": "./img/hub.jpeg", 
-        "attributes": ["Quiet", "Central", "Whiteboards"],
+        "attributes": ["Popular", "Central", "Outlets"],
         "rating": 5 
     },
     {
         "title": "Foster", 
         "link": "foster.html", 
         "image": "./img/foster.jpeg", 
-        "attributes": ["Quiet", "Central", "Whiteboards"],
+        "attributes": ["Quiet", "North", "Popular"],
         "rating": 5 
     },
     {
         "title": "Engineering Library", 
         "link": "./engineering.html", 
         "image": "img/engineering.jpeg", 
-        "attributes": ["Quiet", "Central", "Whiteboards"],
+        "attributes": ["Outlets", "Central", "Whiteboards"],
         "rating": 5 
     },
     {"title": "Denny", 
     "link": "denny.html", 
     "image": "./img/denny.jpeg", 
-    "attributes": ["Quiet", "Central", "Whiteboards"],
+    "attributes": ["Quiet", "North", "Tables"],
     "rating": 5 
     }
 ]
