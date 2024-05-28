@@ -1,3 +1,8 @@
+# INFO 340 Project
+This repository contains code for an interactive information web app, created for the Client-Side Web Development course at the UW iSchool.
+
+The goal of our project was to highlight some of the main study spots that we have on the UW campus. There are a few features that help the user learn about the different spaces, search through them, and then test their knowledge with a quiz. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
