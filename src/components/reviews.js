@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ReviewCard(props) {
     return (
@@ -30,7 +31,7 @@ export function Reviews(props) {
         <div className="review-container">
             <h1>Reviews</h1>
             <div className="reviews-button">
-                <a className="btn btn-primary" href="submitreview.html">Write a Review</a>
+                <Link className="btn btn-primary" to="submitreview.js">Write a Review</Link>
             </div>
 
             <div className="rev-card-container">

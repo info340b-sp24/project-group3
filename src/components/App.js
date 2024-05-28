@@ -36,7 +36,7 @@ import QUESTION_DATA from './quiz-questions.json';
           <Route path='Explore.js' element={<Explore data={displayedData}></Explore>}></Route>
           <Route path='quiz.js' element={<Quiz questionData={QUESTION_DATA}></Quiz>}></Route>
           <Route path='quizresults.js' element={<QuizResults></QuizResults>}></Route> 
-          <Route path='submitreview.js' element={<SubmitReview></SubmitReview>}></Route>
+          <Route path='reviews.js/submitreview.js' element={<SubmitReview></SubmitReview>}></Route>
           <Route path='reviews.js' element={<Reviews data={displayedData}></Reviews>}></Route>
           <Route path='suz.js' element={<Suzzallo></Suzzallo>}></Route>
         </Routes>
