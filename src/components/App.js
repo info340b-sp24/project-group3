@@ -24,7 +24,7 @@ import QUESTION_DATA from './quiz-questions.json';
           <nav>
             <h1>Husky Study Hub</h1>
             <ul className="nav-links">
-              <li><Link to="index.js">Explore</Link></li>
+              <li><Link to="Explore.js">Explore</Link></li>
               <li><Link to="reviews.js">Reviews</Link></li>
               <li><Link to="quiz.js">Quiz</Link></li>
             </ul>
@@ -33,12 +33,11 @@ import QUESTION_DATA from './quiz-questions.json';
 
         <Routes>
           <Route index element={<Explore data={displayedData}></Explore>}></Route>
-          <Route path='index.html' element={<Explore data={displayedData}></Explore>} ></Route>
-          <Route path='quiz.html' element={<Quiz questionData={QUESTION_DATA}></Quiz>}></Route>
-          <Route path='quizresults.html' element={<QuizResults></QuizResults>}></Route> 
-          <Route path='submitreview.html' element={<SubmitReview></SubmitReview>}></Route>
-          <Route path='reviews.html' element={<Reviews data={displayedData}></Reviews>}></Route>
-          <Route path='suz.html' element={<Suzzallo></Suzzallo>}></Route>
+          <Route path='quiz.js' element={<Quiz questionData={QUESTION_DATA}></Quiz>}></Route>
+          <Route path='quizresults.js' element={<QuizResults></QuizResults>}></Route> 
+          <Route path='submitreview.js' element={<SubmitReview></SubmitReview>}></Route>
+          <Route path='reviews.js' element={<Reviews data={displayedData}></Reviews>}></Route>
+          <Route path='suz.js' element={<Suzzallo></Suzzallo>}></Route>
         </Routes>
   
         <footer>
