@@ -5,31 +5,45 @@ import React from 'react';
 
 function Question(props) {
     const renderOptions = () => {
+        const optionElements = [];
+
         if (props.optionsType === "radio") {
-            return props.options.map((option, index) => (
-                <div key={index}>
-                    <input type="radio" id={`${props.name}-${index}`} name={props.name} />
-                    <label htmlFor={`${props.name}-${index}`}>{option}</label>
-                </div>
-            ));
+            for (let index = 0; index < props.options.length; index++) {
+                optionElements.push(
+                    <div key={index}>
+                        <input type="radio" id={`${props.name}-${index}`} name={props.name} />
+                        <label htmlFor={`${props.name}-${index}`}>{props.options[index]}</label>
+                    </div>
+                );
+            }
         } else if (props.optionsType === "checkbox") {
-            return props.options.map((option, index) => (
-                <div key={index}>
-                    <input type="checkbox" id={`${props.name}-${index}`} name={props.name} />
-                    <label htmlFor={`${props.name}-${index}`}>{option}</label>
-                </div>
-            ));
+            for (let index = 0; index < props.options.length; index++) {
+                optionElements.push(
+                    <div key={index}>
+                        <input type="checkbox" id={`${props.name}-${index}`} name={props.name} />
+                        <label htmlFor={`${props.name}-${index}`}>{props.options[index]}</label>
+                    </div>
+                );
+            }
         } else if (props.optionsType === "select") {
+            const selectOptions = [];
+            for (let index = 0; index < props.options.length; index++) {
+                selectOptions.push(
+                    <option key={index} value={props.options[index].toLowerCase().replace(/\s+/g, '-')}>
+                        {props.options[index]}
+                    </option>
+                );
+            }
             return (
                 <select name={props.name}>
-                    {props.options.map((option, index) => (
-                        <option key={index} value={option.toLowerCase().replace(/\s+/g, '-')}>{option}</option>
-                    ))}
+                    {selectOptions}
                 </select>
             );
         }
+
+        return optionElements;
     };
-    
+
     return (
         <div className="question">
             <p>{props.question}</p>
@@ -37,21 +51,25 @@ function Question(props) {
                 {renderOptions()}
             </div>       
         </div>
-    )
+    );
 }
 
 export function Quiz(props) {
-
     let questionData = props.questionData;
-    const questions = questionData.map((q, index) => (
-        <Question
-            key={index}
-            question={q.question}
-            options={q.options}
-            optionsType={q.optionsType}
-            name={q.name}
-        />
-    ))
+    const questionElements = [];
+
+    for (let index = 0; index < questionData.length; index++) {
+        const q = questionData[index];
+        questionElements.push(
+            <Question
+                key={index}
+                question={q.question}
+                options={q.options}
+                optionsType={q.optionsType}
+                name={q.name}
+            />
+        );
+    }
 
     return (
         <main className="quiz-body">
@@ -60,7 +78,7 @@ export function Quiz(props) {
 
             <form>
                 <div className="quiz-container">
-                    {questions}
+                    {questionElements}
                 </div>
 
                 <div className="submit">
@@ -68,6 +86,5 @@ export function Quiz(props) {
                 </div>
             </form>
         </main>
-        
     );
 }
