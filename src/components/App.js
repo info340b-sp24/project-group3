@@ -43,7 +43,7 @@ import QUESTION_DATA from './quiz-questions.json';
   
         <footer>
           <p>&copy; 2024 Husky Study Hub</p>
-          <p>Meg Balfrey, Josh Auvaa, Mia Young, Nedim Suko</p>
+          <p>Meg Balfrey, Mia Young, Nedim Suko</p>
         </footer>
       </div>
     );
