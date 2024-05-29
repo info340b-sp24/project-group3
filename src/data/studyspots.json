@@ -1,40 +1,45 @@
 [
     { 
-        "title": "Suzzallo", 
+        "title": "Suzzallo Library", 
         "link": "suz.js", 
-        "image": "./img/suzallo.jpeg", 
+        "image": "./img/suzallo.jpeg",
+        "alt": "Suzzallo Library", 
         "attributes": ["Quiet", "Central", "Popular"],
         "rating": 5,
         "location": "Central Campus"
     },
     {
-        "title": "Odegaard", 
+        "title": "Odegaard Library", 
         "link": "odegaard.html", 
         "image": "./img/odegaard.jpeg",
+        "alt": "Odegaard Library", 
         "attributes": ["Outlets", "Central", "Whiteboards"], 
         "rating": 5,
         "location": "Central Campus" 
     },
     { 
-        "title": "Mary Gates", 
+        "title": "Mary Gates Hall", 
         "link": "marygates.html", 
-        "image": "./img/marygates.jpeg", 
+        "image": "./img/marygates.jpeg",
+        "alt": "Mary Gates Hall",  
         "attributes": ["Quiet", "Central", "Gothic"],
         "rating": 5,
         "location": "Central Campus"  
     },
     {
-        "title": "Maple", 
+        "title": "Maple Hall", 
         "link": "maple.html", 
         "image": "./img/maple.jpeg", 
+        "alt": "Maple Hall", 
         "attributes": ["Modern", "West", "Whiteboards"],
         "rating": 5,
         "location": "West Campus" 
     },
     {
-        "title": "IMA", 
+        "title": "IMA Building", 
         "link": "ima.html", 
-        "image": "./img/ima.jpeg", 
+        "image": "./img/ima.jpeg",
+        "alt": "IMA Building",  
         "attributes": ["Spacious", "South", "Modern"],
         "rating": 5,
         "location": "South Campus" 
@@ -42,15 +47,17 @@
     {
         "title": "The HUB", 
         "link": "hub.html", 
-        "image": "./img/hub.jpeg", 
+        "image": "./img/hub.jpeg",
+        "alt": "Husky Union Building",  
         "attributes": ["Popular", "Central", "Outlets"],
         "rating": 5,
         "location": "Central Campus" 
     },
     {
-        "title": "Foster", 
+        "title": "Foster Business Library", 
         "link": "foster.html", 
         "image": "./img/foster.jpeg", 
+        "alt": "Foster Business Library", 
         "attributes": ["Quiet", "North", "Popular"],
         "rating": 5,
         "location": "North Campus" 
@@ -58,15 +65,17 @@
     {
         "title": "Engineering Library", 
         "link": "./engineering.html", 
-        "image": "img/engineering.jpeg", 
+        "image": "img/engineering.jpeg",
+        "alt": "Engineering Library",  
         "attributes": ["Outlets", "Central", "Whiteboards"],
         "rating": 5,
         "location": "Central Campus" 
     },
     {
-        "title": "Denny", 
+        "title": "Denny Hall", 
         "link": "denny.html", 
-        "image": "./img/denny.jpeg", 
+        "image": "./img/denny.jpeg",
+        "alt": "Denny Hall",  
         "attributes": ["Quiet", "North", "Tables"],
         "rating": 5,
         "location": "North Campus" 
