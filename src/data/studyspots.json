@@ -63,11 +63,12 @@
         "rating": 5,
         "location": "Central Campus" 
     },
-    {"title": "Denny", 
-    "link": "denny.html", 
-    "image": "./img/denny.jpeg", 
-    "attributes": ["Quiet", "North", "Tables"],
-    "rating": 5,
-    "location": "North Campus" 
+    {
+        "title": "Denny", 
+        "link": "denny.html", 
+        "image": "./img/denny.jpeg", 
+        "attributes": ["Quiet", "North", "Tables"],
+        "rating": 5,
+        "location": "North Campus" 
     }
 ]
