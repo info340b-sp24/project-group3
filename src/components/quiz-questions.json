@@ -1,38 +1,72 @@
 [
     {
-        "question": "Would you like a silent area available to you?",
-        "options": ["Yes", "No"],
-        "optionsType": "radio", 
-        "name": "noise" 
-    },
-    {
-        "question": "What area of campus would you like to study?",
+        "question": "The Foster Business Library is located in which part of the UW campus?",
         "options": ["North", "West", "South", "Central"],
         "optionsType": "radio",
-        "name": "area" 
+        "name": "area",
+        "correctAnswer": "North" 
     },
     {
-        "question": "What kind of environment are you feeling?",
-        "options": ["Popular", "Lesser Known", "Modern", "Gothic"],
-        "optionsType": "select",
-        "name": "environment" 
+        "question": "The Odegaard Undergradute Library offers what unique feature to students?",
+        "options": ["24/7 Access", "Free Coffee", "Private Study Rooms", "Gym Facilities"],
+        "optionsType": "radio",
+        "name": "environment",
+        "correctAnswer": "24/7 Access" 
     },
     {
-        "question": "What resources do you need available to you?",
-        "options": ["Whiteboards", "Outlets", "Computers", "Printers"],
-        "optionsType": "checkbox",
-        "name":"resources"
+        "question": "Which library is directly adjacent to Red Square?",
+        "options": ["Odegaard Undergraduate Library", "Foster Business Library", "Suzallo Library", "Health Sciences Library"],
+        "optionsType": "radio",
+        "name":"name",
+        "correctAnswer": "Odegaard Undergraduate Library"
     },
     {
-        "question": "Do you have your husky card?", 
-        "options": ["Yes", "No"], 
+        "question": "Which study spot is quiet and located in the North Campus with tables available?", 
+        "options": ["Mary Gates", "Denny", "Foster", "IMA"], 
         "optionsType": "radio", 
-        "name": "card" 
+        "name": "card",
+        "correctAnswer": "Denny"
     },
     {
-        "question": "Would you like food options available nearby?", 
-        "options": ["Yes", "No"], 
+        "question": "Which library has a cafe inside it?", 
+        "options": ["Odegaard Undergraduate Library", "Foster Business Library", "Suzzallo Library", "Health Sciences Library?"], 
         "optionsType": "radio", 
-        "name": "food" 
+        "name": "food",
+        "correctAnswer": "Suzzallo Library"
+    },
+    {
+
+        "question": "Which study spot is best known for its quiet reading room that resembles the halls of Hogwarts?",
+        "options": ["Mary Gates", "Odegaard Undergraduate Library", "Suzzallo", "The HUB"],
+        "optionsType": "radio",
+        "name": "reading_room",
+        "correctAnswer": "Suzzallo"
+    },
+    {
+        "question": "Which study spot is found in the West Campus and features 'Modern' architecture and 'Whiteboards'?",
+        "options": ["Maple", "Odegaard", "Suzzallo", "Mary Gates"],
+        "optionsType": "radio",
+        "name": "whiteboards",
+        "correctAnswer": "Denny"
+    },
+    {
+        "question": "Which of the following study spots is NOT located in Central Campus?",
+        "options": ["Foster", "Odegaard Undergraduate Library", "The HUB", "Engineering Building"],
+        "optionsType": "radio",
+        "name": "Not_Central",
+        "correctAnswer": "Foster"
+    },
+    {
+        "question": "Which North Campus study spot features 'Quiet' ambiance and 'Tables'?",
+        "options": ["Foster", "Mary Gates", "The HUB", "IMA"],
+        "optionsType": "radio",
+        "name": "Quiet_Tables",
+        "correctAnswer": "Denny"
+    },
+     {   "question": "Which study spot offers 'Whiteboards' but is not 'Popular'?",
+        "options": ["The HUB", "Odegaard Undergraduate Library", "The HUB", "Engineering Building"],
+        "optionsType": "radio",
+        "name": "Not-Popular",
+        "correctAnswer": "Engineering Building"
     }
 ]

@@ -1,41 +1,55 @@
-// import { render } from '@testing-library/react';
-import React from 'react';
+import React, { useState } from 'react';
 
-// import QUESTION_DATA from './data/quiz-questions.json';
-
-function Question(props) {
+function Question({ number, question, options, optionsType, name, handleOptionChange, selectedAnswer, correctAnswer, showFeedback }) {
     const renderOptions = () => {
         const optionElements = [];
 
-        if (props.optionsType === "radio") {
-            for (let index = 0; index < props.options.length; index++) {
+        if (optionsType === "radio") {
+            for (let index = 0; index < options.length; index++) {
                 optionElements.push(
                     <div key={index}>
-                        <input type="radio" id={`${props.name}-${index}`} name={props.name} />
-                        <label htmlFor={`${props.name}-${index}`}>{props.options[index]}</label>
+                        <input
+                            type="radio"
+                            id={`${name}-${index}`}
+                            name={name}
+                            value={options[index]}
+                            onChange={(e) => handleOptionChange(name, e.target.value)}
+                            disabled={showFeedback}
+                            checked={selectedAnswer === options[index]}
+                        />
+                        <label htmlFor={`${name}-${index}`}>{options[index]}</label>
                     </div>
                 );
             }
-        } else if (props.optionsType === "checkbox") {
-            for (let index = 0; index < props.options.length; index++) {
+        } else if (optionsType === "checkbox") {
+            for (let index = 0; index < options.length; index++) {
                 optionElements.push(
                     <div key={index}>
-                        <input type="checkbox" id={`${props.name}-${index}`} name={props.name} />
-                        <label htmlFor={`${props.name}-${index}`}>{props.options[index]}</label>
+                        <input
+                            type="checkbox"
+                            id={`${name}-${index}`}
+                            name={name}
+                            value={options[index]}
+                            onChange={(e) => handleOptionChange(name, e.target.value)}
+                            disabled={showFeedback}
+                            checked={Array.isArray(selectedAnswer) && selectedAnswer.includes(options[index])}
+                        />
+                        <label htmlFor={`${name}-${index}`}>{options[index]}</label>
                     </div>
                 );
             }
-        } else if (props.optionsType === "select") {
+        } else if (optionsType === "select") {
             const selectOptions = [];
-            for (let index = 0; index < props.options.length; index++) {
+            for (let index = 0; index < options.length; index++) {
                 selectOptions.push(
-                    <option key={index} value={props.options[index].toLowerCase().replace(/\s+/g, '-')}>
-                        {props.options[index]}
+                    <option key={index} value={options[index].toLowerCase().replace(/\s+/g, '-')}>
+                        {options[index]}
                     </option>
                 );
             }
             return (
-                <select name={props.name}>
+                <select name={name} onChange={(e) => handleOptionChange(name, e.target.value)} disabled={showFeedback} value={selectedAnswer || ''}>
+                    <option value="">Select an option</option>
                     {selectOptions}
                 </select>
             );
@@ -44,9 +58,19 @@ function Question(props) {
         return optionElements;
     };
 
+    const renderFeedback = () => {
+        if (!showFeedback) return null;
+        const isCorrect = selectedAnswer === correctAnswer;
+        return (
+            <span className={isCorrect ? 'correct' : 'incorrect'}>
+                {isCorrect ? '✔️' : '❌'}
+            </span>
+        );
+    };
+
     return (
         <div className="question">
-            <p>{props.question}</p>
+            <p>{number}. {question} {renderFeedback()}</p>
             <div>
                 {renderOptions()}
             </div>       
@@ -54,37 +78,68 @@ function Question(props) {
     );
 }
 
-export function Quiz(props) {
-    let questionData = props.questionData;
-    const questionElements = [];
+export function Quiz({ questionData }) {
+    const [answers, setAnswers] = useState({});
+    const [score, setScore] = useState(null);
+    const [showFeedback, setShowFeedback] = useState(false);
 
-    for (let index = 0; index < questionData.length; index++) {
-        const q = questionData[index];
-        questionElements.push(
-            <Question
-                key={index}
-                question={q.question}
-                options={q.options}
-                optionsType={q.optionsType}
-                name={q.name}
-            />
-        );
-    }
+    const handleOptionChange = (name, value) => {
+        setAnswers(prevAnswers => ({ ...prevAnswers, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let correctCount = 0;
+        questionData.forEach(question => {
+            if (answers[question.name] === question.correctAnswer) {
+                correctCount += 1;
+            }
+        });
+        setScore(correctCount);
+        setShowFeedback(true);
+    };
+
+    const handleReset = () => {
+        setAnswers({});
+        setScore(null);
+        setShowFeedback(false);
+    };
+
+    const questionElements = questionData.map((q, index) => (
+        <Question
+            key={index}
+            number={index + 1}
+            question={q.question}
+            options={q.options}
+            optionsType={q.optionsType}
+            name={q.name}
+            handleOptionChange={handleOptionChange}
+            selectedAnswer={answers[q.name]}
+            correctAnswer={q.correctAnswer}
+            showFeedback={showFeedback}
+        />
+    ));
 
     return (
         <main className="quiz-body">
-            <h1>Where should you study?</h1>
-            <h2>Take the quiz to find your ideal study spot</h2>
+            <h2>Test your knowledge of study spots on UW campus!</h2>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="quiz-container">
                     {questionElements}
                 </div>
 
                 <div className="submit">
                     <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="button" className="btn btn-secondary" onClick={handleReset}>Reset Quiz</button>
                 </div>
             </form>
+
+            {score !== null && (
+                <div className="score">
+                    <h3>Your score: {score} / {questionData.length}</h3>
+                </div>
+            )}
         </main>
     );
 }
