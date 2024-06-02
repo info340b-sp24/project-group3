@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDom from 'react-dom/client';
 import { Explore } from './Explore';
 import { Quiz } from './quiz';
@@ -7,16 +7,40 @@ import { Reviews } from './reviews';
 import { SubmitReview } from './submitreview';
 import { Suzzallo } from './suz';
 import { Routes, Route, Link } from 'react-router-dom';
+import { getDatabase, ref, onValue } from 'firebase/database';
 
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
 
 import QUESTION_DATA from './quiz-questions.json';
 
-   
   function App(props) {
 
     let displayedData = props.spotData
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+      const db = getDatabase();
+      const allReviewsRef = ref(db, "allReviews");
+
+      const offFunction = onValue(allReviewsRef, (snapshot) => {
+          const valueObj = snapshot.val();
+          const objKeys = valueObj ? Object.keys(valueObj) : [];
+          const objArray = objKeys.map((keyString) => {
+              const theReviewObj = valueObj[keyString];
+              if (typeof theReviewObj === 'object' && theReviewObj !== null) {
+                  theReviewObj.key = keyString;
+                  return theReviewObj;
+              }
+              return null;
+          }).filter(review => review !== null);
+          setReviews(objArray);
+      });
+
+      return () => {
+          offFunction();
+      };
+  }, []);
   
     return (
       <div>
@@ -36,8 +60,8 @@ import QUESTION_DATA from './quiz-questions.json';
           <Route path='Explore.js' element={<Explore data={displayedData}></Explore>}></Route>
           <Route path='quiz.js' element={<Quiz questionData={QUESTION_DATA}></Quiz>}></Route>
           <Route path='quizresults.js' element={<QuizResults></QuizResults>}></Route> 
-          <Route path='reviews.js/submitreview.js' element={<SubmitReview></SubmitReview>}></Route>
-          <Route path='reviews.js' element={<Reviews data={displayedData}></Reviews>}></Route>
+          <Route path='reviews.js/submitreview.js' element={<SubmitReview setReviews={setReviews}></SubmitReview>}></Route>
+          <Route path='reviews.js' element={<Reviews data={displayedData} reviews={reviews}></Reviews>}></Route>
           <Route path='suz.js' element={<Suzzallo></Suzzallo>}></Route>
         </Routes>
   
