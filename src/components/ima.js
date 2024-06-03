@@ -4,7 +4,7 @@ export function Ima() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/ima.jpeg" className="card-img-top" alt="Picture of the IMA" />
+                    <img src="img/ima.jpeg" className="card-img-top" alt="The IMA" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Intramural Activity Building</h1>

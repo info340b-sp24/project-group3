@@ -4,7 +4,7 @@ export function Odegaard() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/odegaard.jpeg" className="card-img-top" alt="Picture of Odegaard" />
+                    <img src="img/odegaard.jpeg" className="card-img-top" alt="Odegaard" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Odegaard</h1>

@@ -7,6 +7,8 @@ export function SubmitReview(props) {
     const [comment, setComment] = useState("");
     const [rating, setRating] = useState("");
     const [submissionMessage, setSubmissionMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+
 
     const addReview = (event) => {
         event.preventDefault();
@@ -26,6 +28,10 @@ export function SubmitReview(props) {
             setComment("");
             setRating("");
             setSubmissionMessage("Review has been submitted");
+            setErrorMessage("")
+        })
+        .catch((error) => {
+            setErrorMessage("Error submitting review: " + error.message);
         });
     };
 
@@ -35,7 +41,6 @@ export function SubmitReview(props) {
             <div className="picture">
                 <form onSubmit={addReview}>
                     <div className="form-group">
-                        {/* <label htmlFor="name">Name: </label> */}
                         <select
                                 name="Name"
                                 value={name}
@@ -86,16 +91,7 @@ export function SubmitReview(props) {
                 </form>
             </div>
             {submissionMessage && <p>{submissionMessage}</p>}
-            {/* <div className="reviews">
-                <h2>Reviews:</h2>
-                <ul>
-                    {reviews.map((review) => (
-                        <li key={review.key}>
-                            <strong>{review.name}</strong>: {review.comment} ({review.rating})
-                        </li>
-                    ))}
-                </ul>
-            </div> */}
+            {errorMessage && <p className="error">{errorMessage}</p>}
         </div>
     );
 }

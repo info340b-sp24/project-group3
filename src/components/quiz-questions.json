@@ -29,7 +29,7 @@
     },
     {
         "question": "Which library has a cafe inside it?", 
-        "options": ["Odegaard Undergraduate Library", "Foster Business Library", "Suzzallo Library", "Health Sciences Library?"], 
+        "options": ["Odegaard Undergraduate Library", "Foster Business Library", "Suzzallo Library", "Health Sciences Library"], 
         "optionsType": "radio", 
         "name": "food",
         "correctAnswer": "Suzzallo Library"

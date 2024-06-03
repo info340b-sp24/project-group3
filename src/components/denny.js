@@ -4,7 +4,7 @@ export function Denny() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/denny.jpeg" className="card-img-top" alt="Picture of Denny Hall" />
+                    <img src="img/denny.jpeg" className="card-img-top" alt="Denny Hall" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Denny Hall</h1>

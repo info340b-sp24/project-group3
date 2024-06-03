@@ -4,7 +4,7 @@ export function HUB() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/hub.jpeg" className="card-img-top" alt="Picture of the Husky Union Building" />
+                    <img src="img/hub.jpeg" className="card-img-top" alt="The Husky Union Building" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Husky Union Building</h1>

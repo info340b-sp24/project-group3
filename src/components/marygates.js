@@ -4,7 +4,7 @@ export function Marygates() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/marygates.jpeg" className="card-img-top" alt="Picture of Marygates Hall" />
+                    <img src="img/marygates.jpeg" className="card-img-top" alt="Marygates Hall" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Marygates Hall</h1>

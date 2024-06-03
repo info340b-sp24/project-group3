@@ -4,7 +4,7 @@ export function Engineering() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/engineering.jpeg" className="card-img-top" alt="Picture of the Engineer Library" />
+                    <img src="img/engineering.jpeg" className="card-img-top" alt="The Engineer Library" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Engineering Library</h1>

@@ -4,7 +4,7 @@ export function Foster() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/foster.jpeg" className="card-img-top" alt="Picture of Foster Business Library" />
+                    <img src="img/foster.jpeg" className="card-img-top" alt="Foster Business Library" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Foster Business Library</h1>

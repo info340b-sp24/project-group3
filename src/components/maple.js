@@ -4,7 +4,7 @@ export function Maple() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/maple.jpeg" className="card-img-top" alt="Picture of the Maple Hall" />
+                    <img src="img/maple.jpeg" className="card-img-top" alt="Maple Hall" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Maple Hall Area 1</h1>
