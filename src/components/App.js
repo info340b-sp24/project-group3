@@ -8,6 +8,14 @@ import { SubmitReview } from './submitreview';
 import { Suzzallo } from './suz';
 import { Routes, Route, Link } from 'react-router-dom';
 import { getDatabase, ref, onValue } from 'firebase/database';
+import { Odegaard } from './ode';
+import { Marygates } from './marygates';
+import { Foster } from './foster';
+import { Ima } from './ima';
+import { Maple } from './maple';
+import { HUB } from './hub';
+import { Engineering } from './engineering';
+import { Denny } from './denny';
 
 // import '.src/style.css'
 // import 'bootstrap/dist/css/bootstrap.css'
@@ -63,6 +71,14 @@ import QUESTION_DATA from './quiz-questions.json';
           <Route path='reviews.js/submitreview.js' element={<SubmitReview setReviews={setReviews}></SubmitReview>}></Route>
           <Route path='reviews.js' element={<Reviews data={displayedData} reviews={reviews}></Reviews>}></Route>
           <Route path='suz.js' element={<Suzzallo></Suzzallo>}></Route>
+          <Route path='ode.js' element={<Odegaard></Odegaard>}></Route>
+          <Route path='marygates.js' element={<Marygates></Marygates>}></Route>
+          <Route path='foster.js' element={<Foster></Foster>}></Route>
+          <Route path='ima.js' element={<Ima></Ima>}></Route>
+          <Route path='maple.js' element={<Maple></Maple>}></Route>
+          <Route path='hub.js' element={<HUB></HUB>}></Route>
+          <Route path='engineering.js' element={<Engineering></Engineering>}></Route>
+          <Route path='denny.js' element={<Denny></Denny>}></Route>
         </Routes>
   
         <footer>

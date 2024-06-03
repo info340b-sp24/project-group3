@@ -10,7 +10,7 @@
     },
     {
         "title": "Odegaard Library", 
-        "link": "odegaard.html", 
+        "link": "ode.js", 
         "image": "./img/odegaard.jpeg",
         "alt": "Odegaard Library", 
         "attributes": ["Outlets", "Central", "Whiteboards"], 
@@ -19,7 +19,7 @@
     },
     { 
         "title": "Mary Gates Hall", 
-        "link": "marygates.html", 
+        "link": "marygates.js", 
         "image": "./img/marygates.jpeg",
         "alt": "Mary Gates Hall",  
         "attributes": ["Quiet", "Central", "Gothic"],
@@ -28,7 +28,7 @@
     },
     {
         "title": "Maple Hall", 
-        "link": "maple.html", 
+        "link": "maple.js", 
         "image": "./img/maple.jpeg", 
         "alt": "Maple Hall", 
         "attributes": ["Modern", "West", "Whiteboards"],
@@ -37,7 +37,7 @@
     },
     {
         "title": "IMA Building", 
-        "link": "ima.html", 
+        "link": "ima.js", 
         "image": "./img/ima.jpeg",
         "alt": "IMA Building",  
         "attributes": ["Spacious", "South", "Modern"],
@@ -46,7 +46,7 @@
     },
     {
         "title": "The HUB", 
-        "link": "hub.html", 
+        "link": "hub.js", 
         "image": "./img/hub.jpeg",
         "alt": "Husky Union Building",  
         "attributes": ["Popular", "Central", "Outlets"],
@@ -55,7 +55,7 @@
     },
     {
         "title": "Foster Business Library", 
-        "link": "foster.html", 
+        "link": "foster.js", 
         "image": "./img/foster.jpeg", 
         "alt": "Foster Business Library", 
         "attributes": ["Quiet", "North", "Popular"],
@@ -64,7 +64,7 @@
     },
     {
         "title": "Engineering Library", 
-        "link": "./engineering.html", 
+        "link": "./engineering.js", 
         "image": "img/engineering.jpeg",
         "alt": "Engineering Library",  
         "attributes": ["Outlets", "Central", "Whiteboards"],
@@ -73,7 +73,7 @@
     },
     {
         "title": "Denny Hall", 
-        "link": "denny.html", 
+        "link": "denny.js", 
         "image": "./img/denny.jpeg",
         "alt": "Denny Hall",  
         "attributes": ["Quiet", "North", "Tables"],

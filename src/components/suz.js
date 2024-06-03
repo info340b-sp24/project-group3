@@ -4,7 +4,7 @@ export function Suzzallo() {
     return (
             <div className="card-container">
                 <div className="lib-pic">
-                    <img src="img/suzallo.jpeg" className="card-img-top" alt="Study Spot Image" />
+                    <img src="img/suzallo.jpeg" className="card-img-top" alt="Image of Suzzallo" />
                 </div>
                 <div className="card">
                     <h1 className="card-title">Suzzallo</h1>
