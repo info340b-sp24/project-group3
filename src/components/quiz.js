@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function Question({ number, question, options, optionsType, name, handleOptionChange, selectedAnswer, correctAnswer, showFeedback }) {
     const renderOptions = () => {
         const optionElements = [];
@@ -120,6 +121,33 @@ export function Quiz({ questionData }) {
         />
     ));
 
+    const renderScoreMessage = () => {
+        if (score === null) return null;
+        const totalQuestions = questionData.length;
+        const percentage = (score / totalQuestions) * 100;
+        let message = '';
+
+        if (percentage === 100) {
+            message = 'Perfect score! 🎉';
+        } else if (percentage >= 75) {
+            message = 'Great job! 👍';
+        } else if (percentage >= 50) {
+            message = 'Good effort! 🙂';
+        } else {
+            message = 'Keep trying! 💪';
+        }
+
+        return (
+            <div className="score-message">
+                <h3>{message}</h3>
+                <div className="progress-bar">
+                    <div className="progress" style={{ width: `${percentage}%` }}></div>
+                </div>
+                <p>You scored {score} out of {totalQuestions}</p>
+            </div>
+        );
+    };
+
     return (
         <main className="quiz-body">
             <h2>Test your knowledge of study spots on UW campus!</h2>
@@ -133,13 +161,9 @@ export function Quiz({ questionData }) {
                     <button type="submit" className="btn btn-primary">Submit</button>
                     <button type="button" className="btn btn-secondary" onClick={handleReset}>Reset Quiz</button>
                 </div>
-            </form>
 
-            {score !== null && (
-                <div className="score">
-                    <h3>Your score: {score} / {questionData.length}</h3>
-                </div>
-            )}
+                {renderScoreMessage()}
+            </form>
         </main>
     );
 }

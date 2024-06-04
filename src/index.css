@@ -80,7 +80,6 @@ form {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-
 }
 
 .card:hover {
@@ -108,7 +107,6 @@ form {
     color: black;
 }
 
-
 footer {
     bottom: 0;
     width: 100%;
@@ -123,7 +121,6 @@ footer {
 a {
     color: black;
 }
-
 
 .review-container {
     text-align: center;
@@ -147,7 +144,6 @@ a {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-
 }
 
 .rev-card:hover {
@@ -160,7 +156,6 @@ a {
     height: auto;
     margin-right: 20px;
 }
-
 
 .rev-card-body {
     padding: 20px;
@@ -177,6 +172,7 @@ a {
     font-size: 1rem;
     color: black;
 }
+
 .attribute-bubble {
     display: inline-block;
     padding: 5px 10px;
@@ -215,11 +211,42 @@ a {
     border-color: #0056b3;
 }
 
+.score-message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
 @media (min-width: 768px) {
     body {
         background-color: #c8bdf8;
     }
-    
+
     nav {
         background-color: #9766cb;
         color: black;
@@ -267,4 +294,3 @@ a {
         align-items: center;
     }
 }
-

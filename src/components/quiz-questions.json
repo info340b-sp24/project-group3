@@ -47,7 +47,7 @@
         "options": ["Maple Hall", "Odegaard Undergraduate Library", "Suzzallo Library", "Mary Gates Hall"],
         "optionsType": "radio",
         "name": "whiteboards",
-        "correctAnswer": "Denny Hall"
+        "correctAnswer": "Odegaard Undergraduate Library"
     },
     {
         "question": "Which of the following study spots is NOT located in Central Campus?",
@@ -61,7 +61,7 @@
         "options": ["Foster Business Library", "Mary Gates Hall", "The HUB", "IMA"],
         "optionsType": "radio",
         "name": "Quiet_Tables",
-        "correctAnswer": "Denny Hall"
+        "correctAnswer": "Foster Business Library"
     },
      {   "question": "Which study spot offers 'Whiteboards' but is not 'Popular'?",
         "options": ["The HUB", "Odegaard Undergraduate Library", "The HUB", "Engineering Building"],
